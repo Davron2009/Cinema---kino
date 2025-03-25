@@ -43,5 +43,21 @@ function signup() {
     }
     document.getElementById("login-box").classList.toggle("hidden");
     document.getElementById("signup-box").classList.toggle("hidden");
-    location="http://127.0.0.1:5500/main.html"
+    location="main.html"
 }
+
+let searchInput = document.querySelector('.search-input');
+let cardBoxes = [...document.querySelectorAll('.card-box-img')];
+
+searchInput.addEventListener('input', () => {
+    let value = searchInput.value.trim().toLowerCase();
+
+    cardBoxes.forEach(card => {
+        let imgValue = card.querySelector('.card-text').textContent.trim().toLowerCase();
+        if (imgValue.includes(value)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
