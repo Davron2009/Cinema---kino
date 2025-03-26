@@ -43,7 +43,6 @@ function signup() {
     }
     document.getElementById("login-box").classList.toggle("hidden");
     document.getElementById("signup-box").classList.toggle("hidden");
-    location="main.html"
 }
 
 let searchInput = document.querySelector('.search-input');
