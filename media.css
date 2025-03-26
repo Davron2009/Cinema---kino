@@ -1,139 +1,255 @@
-
-
-@media (max-width: 1024px) {
-    /* Navigatsiya paneli */
+@media only screen and (max-width: 768px) {
+.body {
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    max-width: 768px;
+    width: 100%;
+    padding: 24px;
+    overflow-x: hidden;
+}
+.nav {
+    width: 719px;
+    height: 72px;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+} 
+   
+ 
     .nav-bar {
-        width: 100%;
-        height: 60px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        background-color: #141414; /* Qorong‘i fon */
-        z-index: 1000;
+        transform: translateY(35px);
+        z-index: 1;
+        position: absolute;
+        left: 24px;
+    }
+ 
+    .nav-list{
+        transform: rotate(90deg);
+        position: absolute;
+        top: -90%;
     }
 
-    /* Asosiy qism */
+    .nav-item {
+        transform: translateY(24px);
+        z-index: 1;
+        position: absolute;
+        right: 24px;
+    }
+
     .main {
-        padding-top: 80px; /* Navigatsiyadan keyin joy qoldirish */
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-top: 128px;
     }
 
-    /* Qidiruv qismi */
-    .search {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
+    .mainscreen {
+        padding-left: 25px;
     }
 
-    .search-input {
+    .recommended {
         width: 100%;
-        height: 40px;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 8px;
-        border: none;
     }
 
-    /* Trendlardagi filmlar */
-    .trending-movies {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 15px;
+    .rec-films {
+        width: 768px;
+        row-gap: 104px;
     }
 
-    .trending-movie {
-        min-width: 48%;
-        height: 200px;
-        border-radius: 10px;
-        overflow: hidden;
+    .rec-film {
+        width: 220px;
+        height: 140px;
     }
 
-    /* Tavsiya qilingan filmlar */
-    .recommended-movies {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Ikki ustunli grid */
-        gap: 15px;
-    }
-
-    .card-box-img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+    .rec-play-btn {
+        left: 50px;
+        top: 50px;
     }
 }
 
-@media (max-width: 768px) {
-    /* Navigatsiya paneli */
-    .nav-bar {
+@media only screen and (max-width: 375px) {
+    .mainscreen {
+        flex-direction: row;
+        width: 375px;
+    }
+
+    .section-title {
+        color: var(--Pure-White);
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: -0.312px;
+    }
+
+    .mainscreen {
+        flex-direction: row;
+    }
+
+    .nav {
         width: 100%;
-        height: 60px;
-        position: fixed;
-        top: 0;
+        height: 72px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        z-index: 999;
         left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 15px;
-        background-color: #141414;
-        z-index: 1000;
+        top: 0;
+        border-radius: 0px;
     }
 
-    /* Asosiy qism */
-    .main {
-        padding-top: 80px; /* Navigatsiya uchun joy qoldirish */
-        padding-left: 15px;
-        padding-right: 15px;
+    .header-logo {
+        transform: translateY(35px);
+        z-index: 1;
+        position: absolute;
+        left: 24px;
     }
 
-    /* Qidiruv paneli */
+    .header-logo img {
+        width: 25px;
+        height: 20px;
+
+    }
+
+    .nav svg {
+        transform: rotate(90deg);
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: -50%;
+        width: 140px;
+        height: 140px;
+    }
+
     .search {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
+        color: var(--Pure-White);
+        font-size: 16px;
+        font-weight: 400;
     }
 
-    .search-input {
-        width: 100%;
-        height: 40px;
-        padding: 8px;
-        font-size: 14px;
-        border-radius: 6px;
-        border: none;
+    .search::placeholder {
+        color: var(--Pure-White);
+        font-size: 16px;
+        font-weight: 400;
     }
 
-    /* Trendlardagi filmlar */
-    .trending-movies {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 10px;
+    .profile-link {
+        transform: translateY(24px);
+        z-index: 1;
+        position: absolute;
+        right: 24px;
+    }
+
+    .main {
+        margin-top: 128px;
+    }
+
+    .mainscreen {
+        padding-left: 25px;
     }
 
     .trending-movie {
-        min-width: 90%;
-        height: 180px;
-        border-radius: 8px;
+        max-width: 240px;
+        max-height: 140px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trending-movies .trending-movie {
+        min-width: 240px;
+        height: 140px;
+        padding: 16px;
         overflow: hidden;
     }
 
-    /* Tavsiya qilingan filmlar */
-    .recommended-movies {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Ikki ustunli grid */
-        gap: 10px;
+    .texts {
+        padding: 16px;
     }
 
-    .card-box-img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
+    .svg {
+        top: 8px;
+        right: 8px;
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        width: 90px;
+        height: 35px;
+        column-gap: 5px;
+    }
+
+    .trending-movie img {
+        width: 240px;
+        height: 140px;
+    }
+
+    .texts span {
+        color: var(--Pure-White);
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .movie-name {
+        color: var(--Pure-White);
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .play-btn {
+        top: 40px;
+        left: 40px;
+        width: 90px;
+        height: 35px;
+        column-gap: 5px;
+    }
+
+
+
+    .rec-films {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        justify-content: start;
+        column-gap: 15px;
+        row-gap: 16px;
+    }
+
+
+    .desc span {
+        color: var(--Pure-White);
+        font-size: 11px;
+        font-weight: 400;
+    }
+
+    .rec-title {
+        color: var(--Pure-White);
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .rec-film-img {
+        width: 164px;
+        height: 110px;
+    }
+
+    
+
+    .rec-film-img svg {
+        width: 32px;
+        height: 32px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .rec-film {
+        width: max-content;
+        height: 140px;
+    }
+
+    .trending-movies{
+        width: 375px;
+        padding-right: 50px;
     }
 }
